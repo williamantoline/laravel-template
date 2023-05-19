@@ -1,0 +1,84 @@
+openapi: 3.0.3
+info:
+  title: Laravel
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost'
+paths:
+  /api/auth/login:
+    post:
+      summary: ''
+      operationId: postApiAuthLogin
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: ''
+                  example: itaque
+                password:
+                  type: string
+                  description: ''
+                  example: ad
+              required:
+                - email
+                - password
+      security: []
+  /api/auth/register:
+    post:
+      summary: ''
+      operationId: postApiAuthRegister
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: suscipit
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: greenfelder.eveline@example.org
+                password:
+                  type: string
+                  description: ''
+                  example: ipsa
+              required:
+                - name
+                - email
+                - password
+      security: []
+  /api/auth/revoke:
+    post:
+      summary: ''
+      operationId: postApiAuthRevoke
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+tags:
+  -
+    name: Endpoints
+    description: ''
