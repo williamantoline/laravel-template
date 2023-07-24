@@ -10,7 +10,6 @@
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.2",
         "laravel/tinker": "^2.8",
-        "spatie/laravel-google-cloud-storage": "^2.2",
         "ext-dom": "*"
     },
     "require-dev": {
