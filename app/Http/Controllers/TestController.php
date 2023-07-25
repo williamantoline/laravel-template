@@ -9,7 +9,7 @@ class TestController
     public function test(): JsonResponse
     {
         return response()->json([
-            'status' => 'okay'
+            'status' => 'okay staging'
         ]);
     }
 }
