@@ -1,7 +1,8 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AuthController;
+use App\Http\Controllers\TestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,8 +15,8 @@ use App\Http\Controllers\AuthController;
 |
 */
 
-Route::prefix('auth')->group(function () {
-    Route::post('login', [AuthController::class, 'login'])->name('auth.login');
-    Route::post('register', [AuthController::class, 'register'])->name('auth.register');
-    Route::post('revoke', [AuthController::class, 'revoke'])->name('auth.revoke')->middleware('auth:sanctum');
+Route::get('/test', [TestController::class, 'test']);
+
+Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+    return $request->user();
 });
